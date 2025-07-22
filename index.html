@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Stopwatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stopwatch.css">
+        
+</head>
+<body>
+    <div class="stopwatch-container w-full max-w-md p-6 bg-white rounded-xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Precision Stopwatch</h1>
+            <p class="text-gray-600 mt-2">Track time with millisecond accuracy</p>
+        </div>
+        
+        <div class="stopwatch-face w-64 h-64 mx-auto rounded-full flex items-center justify-center mb-8">
+            <div class="text-center">
+                <div id="display" class="text-4xl font-mono font-bold text-gray-800">00:00:00.000</div>
+                <div class="text-sm text-gray-500 mt-2">HOURS : MINUTES : SECONDS</div>
+            </div>
+        </div>
+        
+        <div class="flex justify-center space-x-4 mb-8">
+            <button id="startBtn" class="px-6 py-3 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                Start
+            </button>
+            <button id="pauseBtn" class="px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium hover:bg-yellow-600 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50" disabled>
+                Pause
+            </button>
+            <button id="resetBtn" class="px-6 py-3 bg-red-500 text-white rounded-lg font-medium hover:bg-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50" disabled>
+                Reset
+            </button>
+        </div>
+        
+        <div class="flex justify-center mb-4">
+            <button id="lapBtn" class="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" disabled>
+                Lap
+            </button>
+        </div>
+        
+        <div class="border-t border-gray-200 pt-4">
+            <h2 class="text-xl font-semibold text-gray-800 mb-3">Lap Times</h2>
+            <div id="lapTimes" class="max-h-64 overflow-y-auto">
+                <div class="text-center py-4 text-gray-500">
+                    No lap times recorded yet
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="stopwatch.js"></script>
+   
+        
+</body>
+</html>
+

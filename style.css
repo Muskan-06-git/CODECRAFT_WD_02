@@ -1,0 +1,35 @@
+body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .stopwatch-container {
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .stopwatch-face {
+            background: radial-gradient(circle, #ffffff 0%, #f1f1f1 100%);
+            border: 8px solid #4a5568;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .lap-item:nth-child(odd) {
+            background-color: rgba(74, 85, 104, 0.05);
+        }
+        
+        .lap-item:nth-child(even) {
+            background-color: rgba(74, 85, 104, 0.02);
+        }
+        
+        @media (max-width: 640px) {
+            .stopwatch-container {
+                width: 95%;
+            }
+        }
+   
